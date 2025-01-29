@@ -37,11 +37,13 @@ services:
     container_name: apache
     # Because host port 80 might be in use, bind to 8080:80 or your choice
     ports:
-      - "8080:80"
+      - "127.0.0.1:8080:80"
     depends_on:
       - backend
     networks:
       - app_net
+    volumes:
+    - ../backend:/var/www/html
 
   frontend:
     build: ./frontend
