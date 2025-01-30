@@ -52,7 +52,7 @@ services:
       - "5173:5173"  # If you want to access Vite dev server from outside
     # Optional volume if you want to see/edit the Vue code on your host:
     volumes:
-      - ../frontend:/app
+      - ../frontend:/frontend
     networks:
       - app_net
 
