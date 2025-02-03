@@ -43,7 +43,7 @@ services:
     networks:
       - app_net
     volumes:
-    - ../backend:/var/www/html
+    - ../frontend:/frontend/
 
   frontend:
     build: ./frontend
