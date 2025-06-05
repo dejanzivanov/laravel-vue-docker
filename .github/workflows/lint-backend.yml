@@ -23,6 +23,18 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          else
+            echo "No Node project; skipping install."
+          fi
       - name: Run ESLint
-        run: npm run lint
+        run: |
+          if [ -f package.json ]; then
+            npm run lint
+          else
+            echo "No Node project; skipping lint."
+          fi

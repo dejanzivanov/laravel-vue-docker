@@ -9,8 +9,8 @@ clean:
 	$(DOCKER_COMPOSE) down
 
 fclean: clean
-	@sudo ./clean.sh
-	docker volume prune -f
+        @if [ -f ./clean.sh ]; then sudo ./clean.sh; fi
+        docker volume prune -f
 	# If you want to remove images entirely, uncomment:
 	# docker image prune -a -f
 	docker network prune -f
