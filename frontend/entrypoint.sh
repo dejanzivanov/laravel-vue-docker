@@ -7,6 +7,7 @@ if [ -z "$(ls -A "$APP_DIR/frontend" 2>/dev/null)" ]; then
 
   apk add --update nodejs npm
 
+  # Create a new Vue application using the latest release of create-vue
   npm create vue@latest "frontend" -- --default
 
   cd "$APP_DIR/frontend"
