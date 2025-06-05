@@ -1,2 +1,2 @@
 # laravel-vue-docker
-This is a try to create laravel, vue and mariadb, in 3 different docker containers, with latest updates
+This repository attempts to create a stack with Laravel, Vue, and MariaDB running in three separate Docker containers.

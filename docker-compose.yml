@@ -24,7 +24,7 @@ services:
       - DB_DATABASE=laravel
       - DB_USERNAME=root
       - DB_PASSWORD=root
-    # Optional volume if you want to see/edit the Laravel code on your host:
+    # Host mount to view or edit the generated Laravel code on your machine:
     volumes:
       - ../backend:/var/www/html
     depends_on:
@@ -50,7 +50,7 @@ services:
     container_name: frontend
     ports:
       - "5173:5173"  # If you want to access Vite dev server from outside
-    # Optional volume if you want to see/edit the Vue code on your host:
+    # Host mount to view or edit the generated Vue code on your machine:
     volumes:
       - ../frontend:/frontend
     networks:
