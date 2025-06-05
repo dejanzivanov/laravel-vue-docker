@@ -7,8 +7,8 @@ WEBROOT="/var/www/html"
 if [ -z "$(ls -A $WEBROOT 2>/dev/null)" ]; then
   echo "==> Backend folder is empty. Installing fresh Laravel..."
 
-  # Create new Laravel 11
-  composer create-project laravel/laravel "$WEBROOT" "11.*"
+  # Create a new Laravel application using the latest release
+  composer create-project laravel/laravel "$WEBROOT"
 
   cd "$WEBROOT"
 
