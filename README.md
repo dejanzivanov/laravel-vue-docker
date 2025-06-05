@@ -36,6 +36,15 @@ The stack consists of four services defined in `docker-compose.yml`:
    make
    ```
 
+   After the initial build you can start and stop the stack using the helper
+   targets:
+
+   ```bash
+   make start    # docker compose up -d
+   make stop     # docker compose down
+   make logs     # follow container logs
+   ```
+
    The first launch installs Laravel into `backend/` and creates a Vue project in `frontend/` if those directories are empty.
 
 4. **Access the applications**
