@@ -9,7 +9,7 @@ if [ -z "$(ls -A "$APP_DIR/frontend" 2>/dev/null)" ]; then
 
   npm create vue@latest "frontend" -- --default
 
-  cd "$APP_DIR"frontend
+  cd "$APP_DIR/frontend"
   npm install
 
 else
